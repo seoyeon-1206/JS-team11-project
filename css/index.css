@@ -1,40 +1,66 @@
+:root {
+  --bg--main-color: #163020;
+  --bg--card-color: #102514;
+  --bg--search-color: #395a3f;
+  --text-main-color: #eef0e5;
+  --button-text-color: #4e5968;
+  --delete-text-color: #f67777;
+  --search-text-color: #889e86;
+}
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  font-family: "Nanum Gothic", sans-serif;
 }
 
 body {
-  background-color: aliceblue;
+  /* background-color: aliceblue; */
+  background-color: var(--bg--main-color);
   min-height: 100vh;
+  color: var(--text-main-color);
 }
-
+header {
+  padding: 30px 30px;
+}
+h1 {
+  display: inline-block;
+  padding: 0 30px;
+}
+hr {
+  color: 2px solid var(--text-main-color);
+  margin: 0 40px;
+}
 #search-form {
-  text-align: center;
-  padding: 20px 0;
-  border-bottom: 1px solid black;
-}
-
-#search-form label {
-  font-size: 25px;
+  float: right;
+  margin: 0 30px;
 }
 
 #search-form input {
-  margin-left: 20px;
-  min-width: 200px;
-  padding: 5px 10px;
+  /* margin-left: 20px; */
+  min-width: 250px;
+  padding: 10px 0 10px 10px;
+  background-color: var(--bg--search-color);
+  text-decoration: var(--search-text-color);
+  border: none;
+  border-radius: 10px;
 }
 
 #search-form button {
-  margin-left: 10px;
-  padding: 5px;
+  padding: 10px 20px;
+  background-color: var(--text-main-color);
+  border: none;
+  border-radius: 10px;
+  color: var(--button-text-color);
+  font-weight: bold;
 }
 
 #card-list {
-  font-family: "Playfair Display", serif;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  /* font-family: "Playfair Display", serif; */
+  display: flex;
+  flex-wrap: wrap;
   justify-content: center;
+  gap: 40px;
 }
 
 .movie-card {
@@ -43,34 +69,19 @@ body {
   padding: 20px;
   width: 300px;
   justify-self: center;
-  background-color: bisque;
+  background-color: var(--bg--card-color);
+  border: solid 2px var(--text-main-color);
   border-radius: 10px;
   cursor: pointer;
   user-select: none;
 }
 .movie-card:hover {
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.12), 0 3px 6px rgba(0, 0, 0, 0.24);
-  margin: 20px;
-  padding: 15px;
   width: 320px;
-  justify-self: center;
-  background-color: antiquewhite;
-  border-radius: 10px;
-  cursor: pointer;
-  user-select: none;
 }
 
 .movie-card img {
   width: 100%;
   border-radius: 10px;
-}
-
-header {
-  background-color: #ffe194;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 30px 0;
 }
 
 h3 {
