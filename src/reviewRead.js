@@ -1,20 +1,25 @@
 //reviewRead.js - 해당 영화의 상세페이지의 댓글 내용을
 export const $section = document.querySelector("#review-read");
-export const $movieId =
-  document.querySelector(".movie-id").attributes["movieid"].value;
+const movieId = 123; // 이건 페이지가 연결되면 안
+const url = new URL(
+  `https://api.themoviedb.org/3/movie/${movieId}?language=ko-KR` //location.href;
+);
+export const currMovieId = url.pathname.split("/3/movie/")[1]; //123
+// export const $movieId =
+//   document.querySelector(".movie-id").attributes["movieid"].value;
 export const $readId = document.querySelectorAll("#review-read");
 //임시 데이터
 export const reviews = {
   data: [
     {
-      movieid: `${$movieId}`,
+      movieid: `${currMovieId}`,
       reviewid: "2",
       name: "멍멍",
       review: "최고의 영화였습니다.",
       password: 1234,
     },
     {
-      movieid: `${$movieId}`,
+      movieid: `${currMovieId}`,
       reviewid: "3",
       name: "야옹",
       review: "완전 최고의 영화였습니다.",
@@ -27,13 +32,13 @@ export const reviews = {
 export const datas = [...reviews.data];
 console.log(datas);
 //localStorage이용할 시, reviews.data 대신 datas 사용예정.
-const reviewData = datas.map((arr) => {
+datas.map((arr) => {
   const { reviewid, name, review, password, movieid } = arr;
   return $section.insertAdjacentHTML(
     "beforeend",
     `
-           <div movidid="${movieid}">
-               <div readid="${reviewid}" class="review-id">id: ${reviewid}</div>
+           <div movieid="${movieid}">
+               <div readid="${reviewid}">id: ${reviewid}</div>
                <p>${review}</p>
                <p>작성자: ${name}</p>
                <input type="password" placeholder="password" />
