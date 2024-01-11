@@ -4,16 +4,16 @@ const showMovieDetail = async () => {
 
         const movieDetail = document.querySelector(".movie-description");
         movieDetail.innerHTML = `
-        <img class="moviePoster" src="https://image.tmdb.org/t/p/w500${details.poster_path}" alt="${details.title}">
-            <div class="movieDetail">
-              <h3 class="movieName">${details.title}</h3>
-              <ul class="movieDetailList">  
-                <li>개봉날짜: ${details.release_date}</li> 
+        <img class="movie-poster" src="https://image.tmdb.org/t/p/w500${details.poster_path}" alt="${details.title}">
+            <div class="movie-detail">
+              <h3 class="movie-title">${details.title}</h3>
+              <ul class="movie-detail-list">  
+                <li>${details.release_date}</li> 
                 <li>${details.runtime}분</li> 
                 <li>${details.genres.map(genre => genre.name).join(', ')}</li>
                 <li>${details.vote_average}</li> 
               </ul>
-              <p class="movieOverview">${details.overview}</p>
+              <p class="movie-overview">${details.overview}</p>
             </div>
         `;
     } catch (error) {
