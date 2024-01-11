@@ -1,10 +1,10 @@
 //reviewRead.js - 해당 영화의 상세페이지의 댓글 내용을
-export const $section = document.querySelector("#reviewRead");
+export const $section = document.querySelector("#review-read");
 export const $movieId =
   document.querySelector(".movie-id").attributes["movieid"].value;
-export const $readId = document.querySelectorAll("#reviewRead");
+export const $readId = document.querySelectorAll("#review-read");
 //임시 데이터
-const reviews = {
+export const reviews = {
   data: [
     {
       movieid: `${$movieId}`,
@@ -24,7 +24,7 @@ const reviews = {
 };
 
 //localStorage사용 시, 할당되는 값 const datas = JSON.parse(localStorage.getItme("데이터들은 key이름"))
-const datas = [...reviews.data];
+export const datas = [...reviews.data];
 console.log(datas);
 //localStorage이용할 시, reviews.data 대신 datas 사용예정.
 datas.map((arr) => {
@@ -33,11 +33,11 @@ datas.map((arr) => {
     "beforeend",
     `
            <div movidid="${movieid}">
-               <div readid="${reviewid}">id: ${reviewid}</div>
+               <div readid="${reviewid}" class="review-id">id: ${reviewid}</div>
                <p>${review}</p>
                <p>작성자: ${name}</p>
                <input type="password" placeholder="password" />
-               <button type="submit" id="">삭제</button>
+               <button type="submit" id="review-del-btn">삭제</button>
             </div>
         `
   );
