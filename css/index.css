@@ -21,8 +21,10 @@ body {
 }
 
 #search-form {
+  border: 1px solid red;
   text-align: center;
-  padding: 30px;
+  float: right;
+  /* padding: 30px; */
   /* border-bottom: 1px solid var(--search-text-color); */
 }
 
@@ -31,13 +33,13 @@ body {
 }
 
 #search-form input {
-  margin-left: 20px;
+  /* margin-left: 20px; */
   min-width: 200px;
-  padding: 5px 10px;
+  padding: 5px;
 }
 
 #search-form button {
-  margin-left: 10px;
+  /* margin-left: 10px; */
   padding: 5px;
 }
 
