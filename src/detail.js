@@ -2,17 +2,19 @@ const showMovieDetail = async () => {
     try {
         const details = await fetchMovieDetail();
 
-        const movieDetail = document.querySelector("#detail-list");
+        const movieDetail = document.querySelector(".movie-description");
         movieDetail.innerHTML = `
-        <li class="movie-detail" id=${details.id}>
-            <img src="https://image.tmdb.org/t/p/w500${details.poster_path}" alt="${details.title}">
-            <h3>${details.title}</h3>
-            <p>개봉날짜: ${details.release_date}</p>
-            <p>장르: ${details.genres.map(genre => genre.name).join(', ')}</p>
-            <p>평점: ${details.vote_average}</p>
-            <p>상영시간: ${details.runtime}</p>
-            <p>overview: ${details.overview}</p>
-        </li>
+        <img class="moviePoster" src="https://image.tmdb.org/t/p/w500${details.poster_path}" alt="${details.title}">
+            <div class="movieDetail">
+              <h3 class="movieName">${details.title}</h3>
+              <ul class="movieDetailList">  
+                <li>개봉날짜: ${details.release_date}</li> 
+                <li>${details.runtime}분</li> 
+                <li>${details.genres.map(genre => genre.name).join(', ')}</li>
+                <li>${details.vote_average}</li> 
+              </ul>
+              <p class="movieOverview">${details.overview}</p>
+            </div>
         `;
     } catch (error) {
         console.error("영화 상세 정보를 가져오는 중 오류 발생:", error);
