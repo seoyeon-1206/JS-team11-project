@@ -6,8 +6,8 @@ export const showMovieList = async () => {
     .map(
       (movie) =>
         `<li class="movie-card" id=${movie.id}>
-      <img src="https://image.tmdb.org/t/p/w500${movie.poster_path}" alt="${movie.title}">
-      <h3 class="movie-title">[${movie.title}]</h3>
+      <img src="https://image.tmdb.org/t/p/w500${movie.poster_path}" alt="${movie.original_title}">
+      <h3 class="movie-title">[${movie.original_title} / ${movie.title}]</h3>
       <p>${movie.overview}</p><br>
       <h5>평점 : ${movie.vote_average}</h5>
       </li>`
@@ -37,7 +37,7 @@ async function fetchMovieData() {
     },
   };
   const response = await fetch(
-    "https://api.themoviedb.org/3/movie/top_rated?language=en-US&page=1",
+    "https://api.themoviedb.org/3/movie/top_rated?language=ko-KR&page=1",
     options
   );
   const data = await response.json();

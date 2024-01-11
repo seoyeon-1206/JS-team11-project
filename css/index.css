@@ -67,7 +67,7 @@ hr {
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.12), 0 3px 6px rgba(0, 0, 0, 0.24);
   margin: 20px;
   padding: 20px;
-  width: 300px;
+  width: 370px;
   justify-self: center;
   background-color: var(--bg--card-color);
   border: solid 2px var(--text-main-color);
@@ -76,7 +76,7 @@ hr {
   user-select: none;
 }
 .movie-card:hover {
-  width: 320px;
+  width: 380px;
 }
 
 .movie-card img {
