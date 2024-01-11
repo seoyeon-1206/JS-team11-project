@@ -27,7 +27,7 @@ export const reviews = {
 export const datas = [...reviews.data];
 console.log(datas);
 //localStorage이용할 시, reviews.data 대신 datas 사용예정.
-datas.map((arr) => {
+const reviewData = datas.map((arr) => {
   const { reviewid, name, review, password, movieid } = arr;
   return $section.insertAdjacentHTML(
     "beforeend",
