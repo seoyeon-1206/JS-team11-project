@@ -1,4 +1,12 @@
-@import url('color.css');
+:root {
+  --bg--main-color: #163020;
+  --bg--card-color: #102514;
+  --bg--search-color: #395a3f;
+  --text-main-color: #eef0e5;
+  --button-text-color: #4e5968;
+  --delete-text-color: #f67777;
+  --search-text-color: #889e86;
+}
 * {
   box-sizing: border-box;
   margin: 0;
