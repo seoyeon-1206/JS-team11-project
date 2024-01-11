@@ -1,6 +1,8 @@
 const showMovieDetail = async () => {
     try {
         const details = await fetchMovieDetail();
+        const releaseDate = new Date(details.release_date);
+        const formattedReleaseDate = `${releaseDate.getFullYear()}년 ${releaseDate.getMonth()}월 ${releaseDate.getDate()}일`;
 
         const movieDetail = document.querySelector(".movie-description");
         movieDetail.innerHTML = `
@@ -8,8 +10,8 @@ const showMovieDetail = async () => {
             <div class="movie-detail">
               <h3 class="movie-title">${details.title}</h3>
               <ul class="movie-detail-list">  
-                <li>${details.release_date}</li> 
-                <li>${details.runtime}분</li> 
+                <li>${formattedReleaseDate}</li> 
+                <li>${details.runtime}</li> 
                 <li>${details.genres.map(genre => genre.name).join(', ')}</li>
                 <li>${details.vote_average}</li> 
               </ul>
