@@ -1,10 +1,10 @@
-//영화 내용 가져오기
 const showMovieDetail = async () => {
     try {
         const details = await fetchMovieDetail();
 
-        const movieDetail = document.querySelector("#movie-detail");
+        const movieDetail = document.querySelector("#detail-list");
         movieDetail.innerHTML = `
+        <li class="movie-detail" id=${details.id}>
             <img src="https://image.tmdb.org/t/p/w500${details.poster_path}" alt="${details.title}">
             <h3>${details.title}</h3>
             <p>개봉날짜: ${details.release_date}</p>
@@ -12,6 +12,7 @@ const showMovieDetail = async () => {
             <p>평점: ${details.vote_average}</p>
             <p>상영시간: ${details.runtime}</p>
             <p>overview: ${details.overview}</p>
+        </li>
         `;
     } catch (error) {
         console.error("영화 상세 정보를 가져오는 중 오류 발생:", error);
