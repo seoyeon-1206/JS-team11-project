@@ -28,7 +28,7 @@ async function fetchMovieDetail() {
 
         },
     };
-    
+
     const response = await fetch(
         `https://api.themoviedb.org/3/movie/${movieId}?language=ko-KR`,
         options
@@ -41,4 +41,5 @@ async function fetchMovieDetail() {
     const data = await response.json();
     return data;
 }
+
 showMovieDetail()
