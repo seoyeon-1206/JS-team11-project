@@ -1,3 +1,12 @@
+:root {
+  --bg--main-color: #163020;
+  --bg--card-color: #102514;
+  --bg--search-color: #395a3f;
+  --text-main-color: #eef0e5;
+  --button-text-color: #4e5968;
+  --delete-text-color: #f67777;
+  --search-text-color: #889e86;
+}
 * {
   box-sizing: border-box;
   margin: 0;
@@ -5,14 +14,16 @@
 }
 
 body {
-  background-color: aliceblue;
+  /* background-color: aliceblue; */
+  background-color: var(--bg--main-color);
   min-height: 100vh;
+  color: var(--text-main-color);
 }
 
 #search-form {
   text-align: center;
-  padding: 20px 0;
-  border-bottom: 1px solid black;
+  padding: 30px;
+  /* border-bottom: 1px solid var(--search-text-color); */
 }
 
 #search-form label {
@@ -32,9 +43,10 @@ body {
 
 #card-list {
   font-family: "Playfair Display", serif;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  display: flex;
+  flex-wrap: wrap;
   justify-content: center;
+  gap: 40px;
 }
 
 .movie-card {
@@ -43,21 +55,14 @@ body {
   padding: 20px;
   width: 300px;
   justify-self: center;
-  background-color: bisque;
+  background-color: var(--bg--card-color);
+  border: solid 2px var(--text-main-color);
   border-radius: 10px;
   cursor: pointer;
   user-select: none;
 }
 .movie-card:hover {
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.12), 0 3px 6px rgba(0, 0, 0, 0.24);
-  margin: 20px;
-  padding: 15px;
   width: 320px;
-  justify-self: center;
-  background-color: antiquewhite;
-  border-radius: 10px;
-  cursor: pointer;
-  user-select: none;
 }
 
 .movie-card img {
@@ -66,11 +71,11 @@ body {
 }
 
 header {
-  background-color: #ffe194;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 30px 0;
+  /* justify-content: center; */
+  text-align: left;
+  padding: 30px 30px;
+  border-bottom: 1px solid var(--search-text-color);
 }
 
 h3 {

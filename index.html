@@ -13,18 +13,19 @@
 
   <body>
     <header>
-      <h2>&#127914; 최고 평점 영화 콜렉션 &#127916;</h2>
+      <h2>Show Me Your Movie</h2>
+      <form id="search-form">
+        <!-- <label>영화 검색 : </label> -->
+        <input
+          name="searchValue"
+          type="text"
+          id="search-input"
+          placeholder="영화 제목을 검색해 보세요"
+        />
+        <button type="submit" id="search-btn">검색</button>
+      </form>
     </header>
-    <form id="search-form">
-      <label>영화 검색 : </label>
-      <input
-        name="searchValue"
-        type="text"
-        id="search-input"
-        placeholder="영화 제목을 검색해 보세요"
-      />
-      <button type="submit" id="search-btn">검색</button>
-    </form>
+
     <ul id="card-list"></ul>
     <footer></footer>
   </body>
