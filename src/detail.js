@@ -5,11 +5,12 @@ const showMovieDetail = async () => {
 
         const movieDetail = document.querySelector("#movie-detail");
         movieDetail.innerHTML = `
+            <img src="https://image.tmdb.org/t/p/w500${details.poster_path}" alt="${details.title}">
             <h3>${details.title}</h3>
             <p>개봉날짜: ${details.release_date}</p>
             <p>장르: ${details.genres.map(genre => genre.name).join(', ')}</p>
             <p>평점: ${details.vote_average}</p>
-            <p>tagline: ${details.tagline}</p>
+            <p>상영시간: ${details.runtime}</p>
             <p>overview: ${details.overview}</p>
         `;
     } catch (error) {
