@@ -1,20 +1,25 @@
 //reviewRead.js - 해당 영화의 상세페이지의 댓글 내용을
-export const $section = document.querySelector("#reviewRead");
-export const $movieId =
-  document.querySelector(".movie-id").attributes["movieid"].value;
-export const $readId = document.querySelectorAll("#reviewRead");
+export const $section = document.querySelector("#review-read");
+const movieId = 123; // 이건 페이지가 연결되면 안
+const url = new URL(
+  `https://api.themoviedb.org/3/movie/${movieId}?language=ko-KR` //location.href;
+);
+export const currMovieId = url.pathname.split("/3/movie/")[1]; //123
+// export const $movieId =
+//   document.querySelector(".movie-id").attributes["movieid"].value;
+export const $readId = document.querySelectorAll("#review-read");
 //임시 데이터
-const reviews = {
+export const reviews = {
   data: [
     {
-      movieid: `${$movieId}`,
+      movieid: `${currMovieId}`,
       reviewid: "2",
       name: "멍멍",
       review: "최고의 영화였습니다.",
       password: 1234,
     },
     {
-      movieid: `${$movieId}`,
+      movieid: `${currMovieId}`,
       reviewid: "3",
       name: "야옹",
       review: "완전 최고의 영화였습니다.",
@@ -24,7 +29,7 @@ const reviews = {
 };
 
 //localStorage사용 시, 할당되는 값 const datas = JSON.parse(localStorage.getItme("데이터들은 key이름"))
-const datas = [...reviews.data];
+export const datas = [...reviews.data];
 console.log(datas);
 //localStorage이용할 시, reviews.data 대신 datas 사용예정.
 datas.map((arr) => {
@@ -32,12 +37,12 @@ datas.map((arr) => {
   return $section.insertAdjacentHTML(
     "beforeend",
     `
-           <div movidid="${movieid}">
+           <div movieid="${movieid}">
                <div readid="${reviewid}">id: ${reviewid}</div>
                <p>${review}</p>
                <p>작성자: ${name}</p>
                <input type="password" placeholder="password" />
-               <button type="submit" id="">삭제</button>
+               <button type="submit" id="review-del-btn">삭제</button>
             </div>
         `
   );
