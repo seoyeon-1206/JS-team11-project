@@ -19,28 +19,32 @@ body {
   min-height: 100vh;
   color: var(--text-main-color);
 }
-
-#search-form {
-  border: 1px solid red;
-  text-align: center;
-  float: right;
-  /* padding: 30px; */
-  /* border-bottom: 1px solid var(--search-text-color); */
+header {
+  padding: 30px 30px;
+  border-bottom: 1px solid var(--search-text-color);
 }
-
-#search-form label {
-  font-size: 25px;
+h1 {
+  display: inline-block;
+  padding: 0 30px;
+}
+#search-form {
+  float: right;
+  margin: 0 30px;
 }
 
 #search-form input {
   /* margin-left: 20px; */
-  min-width: 200px;
-  padding: 5px;
+  min-width: 250px;
+  padding: 10px 0;
+  background-color: var(--bg--search-color);
+  text-decoration: var(--search-text-color);
+  border-radius: 10px;
 }
 
 #search-form button {
-  /* margin-left: 10px; */
-  padding: 5px;
+  padding: 10px 20px;
+  background-color: var(--text-main-color);
+  border-radius: 10px;
 }
 
 #card-list {
@@ -70,14 +74,6 @@ body {
 .movie-card img {
   width: 100%;
   border-radius: 10px;
-}
-
-header {
-  display: flex;
-  /* justify-content: center; */
-  text-align: left;
-  padding: 30px 30px;
-  border-bottom: 1px solid var(--search-text-color);
 }
 
 h3 {
