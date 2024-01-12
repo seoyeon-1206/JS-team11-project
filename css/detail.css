@@ -131,37 +131,51 @@ textarea::placeholder {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  
   padding: 30px 0px;
   height: 48px;
-}
-.input-list{
-  display: flex;
-  flex-direction: row;
-  align-items: baseline;
-  margin-right: 545px;
-}
-#input-name {
-  margin-right: 16px;
-}
-#input-name, #input-pw {
-  position: relative;
-  background-color: var(--text-main-color);
-  border-radius: 10px;
-  border-color: transparent;
-  width: 347px;
-  overflow: hidden;
   color: var(--button-text-color);
   font-family: Inter;
-  font-size: 22px;
+  font-size: 24px;
   font-style: normal;
   font-weight: 600;
   line-height: normal;
+
 }
-input::placeholder{
+.input-list {
+  display: flex;
+  flex-direction: row;
+  height: 48px;
+
+}
+.list-name,
+.list-pw {
+ 
+  display: flex;
+  flex-direction: row;
+  background-color: var(--text-main-color);
+  margin-right: 16px;
+  border-radius: 10px;
+  align-items: center;
+  padding: 10px;
+  justify-content: space-between;
+
+}
+.list-name span, 
+.list-pw span {
+  display: inline-block;
+  background-color: var(--text-main-color);
+  border-radius: 10px;
+  padding: 1px;
   color: var(--button-text-color);
+  margin-right: 10px;
 }
 
+#input-name,
+#input-pw {
+  all: unset;
+  border-bottom: 2px solid var(--button-text-color);
+ 
+}
 #reg-btn {
   background-color: var(--text-main-color);
   max-width: 124px;
