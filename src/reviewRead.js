@@ -24,10 +24,17 @@ export const reviewReadTemp = (arr) => {
       `
            <div movieid="${currMovieId}">
                <div readid="${reviewid}">id: ${reviewid}</div>
-               <p>${textVal}</p>
-               <p class="userName">작성자: <span class="name">${nameVal}</span></p>
-               <input type="password" maxlength="4" placeholder="password" />
-               <button type="submit" id="review-del-btn">삭제</button>
+               <p class = "read-deatil">${textVal}</p>
+               <div class="read-list">
+                <div class="read-name">
+                  <p class="userName">작성자: <span class="name">${nameVal}</span></p>
+                </div>
+                <div class="read-pw">
+                  <span>비밀번호</span>
+                  <input id="input-pw" type="password" maxlength="4" placeholder="" />
+                </div>
+                <button type="submit" id="review-del-btn">삭제</button>
+              </div>
             </div>
         `
     );

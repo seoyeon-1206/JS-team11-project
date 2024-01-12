@@ -174,8 +174,8 @@ textarea::placeholder {
 #input-pw {
   all: unset;
   border-bottom: 2px solid var(--button-text-color);
- 
 }
+
 #reg-btn {
   background-color: var(--text-main-color);
   max-width: 124px;
