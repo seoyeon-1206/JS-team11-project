@@ -18,3 +18,9 @@ form.addEventListener("submit", (event) => {
     filterArr(searchInput.value);
   }
 });
+
+//  SMYM 클릭 시 home으로 이동
+const home = document.getElementById("h1");
+home.addEventListener("click", function () {
+  window.location.href = "index.html";
+});
