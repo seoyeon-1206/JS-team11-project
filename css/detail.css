@@ -130,17 +130,30 @@ textarea::placeholder {
 .review-list{
   display: flex;
   flex-direction: row;
-  flex-grow: 1;
-  justify-content: left;
+  justify-content: space-between;
+  
   padding: 30px 0px;
+  height: 48px;
 }
 .input-list{
   display: flex;
   flex-direction: row;
+  margin-right: 545px;
+}
+#input-name {
+  margin-right: 16px;
 }
 #input-name, #input-pw {
   background-color: var(--text-main-color);
   border-radius: 10px;
+  width: 347px;
+  overflow: hidden;
+  color: var(--button-text-color);
+  font-family: Inter;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
 }
 input::placeholder{
   color: var(--button-text-color);
@@ -148,14 +161,13 @@ input::placeholder{
 
 #reg-btn {
   background-color: var(--text-main-color);
+  width: 124px;
   border: none;
   border-radius: 10px;
-  width: 123.074px;
-  height: 47.71px;
   color: var(--button-text-color);
   text-align: center;
   font-family: Inter;
-  font-size: 24px;
+  font-size: 22px;
   font-style: normal;
   font-weight: 600;
   line-height: normal;
