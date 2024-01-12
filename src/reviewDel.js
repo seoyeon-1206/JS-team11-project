@@ -1,6 +1,7 @@
 import { currMovieId, $section, datas } from "./reviewRead.js";
 
 //reviewDel.js
+const data = datas;
 const $delBtn = document.querySelector("#review-del-btn");
 const reviewReadTemp = (arr) => {
   arr.map((el) => {
@@ -25,8 +26,8 @@ console.log(datas);
 const reviewDel = (e) => {
   const currReadId = e.target.closest("#review-read").querySelector("div>div")
     .attributes.readid.value;
-  const currMovieId = e.target.closest("#review-read").querySelector("div")
-    .attributes.movieid.value;
+  //   const currMovieId = e.target.closest("#review-read").querySelector("div")
+  //     .attributes.movieid.value;
   const currPassWord = e.target
     .closest("#review-read")
     .querySelector("input").value;
