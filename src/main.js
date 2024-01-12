@@ -11,5 +11,10 @@ searchInput.focus();
 const form = document.querySelector("#search-form");
 form.addEventListener("submit", (event) => {
   event.preventDefault();
-  filterArr(searchInput.value);
+  if (searchInput.value === "") {
+    alert("영화제목을 입력하세요!");
+    return;
+  } else {
+    filterArr(searchInput.value);
+  }
 });
