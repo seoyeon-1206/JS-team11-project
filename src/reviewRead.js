@@ -6,8 +6,7 @@ const url = new URL(
 );
 export const currMovieId = url.pathname.split("/3/movie/")[1]; //123
 export const $readId = document.querySelectorAll("#review-read");
-const localDatas = JSON.parse(localStorage.getItem("data"));
-console.log(localDatas);
+export const localDatas = JSON.parse(localStorage.getItem("data"));
 
 //localStorage사용 시, 할당되는 값 const datas = JSON.parse(localStorage.getItme("데이터들은 key이름"))
 export const datas = [...localDatas];
@@ -22,7 +21,7 @@ datas.map((arr) => {
            <div movieid="${currMovieId}">
                <div readid="${reviewid}">id: ${reviewid}</div>
                <p>${textVal}</p>
-               <p>작성자: ${nameVal}</p>
+               <p class="userName">작성자: <span>${nameVal}</span></p>
                <input type="password" placeholder="password" />
                <button type="submit" id="review-del-btn">삭제</button>
             </div>
