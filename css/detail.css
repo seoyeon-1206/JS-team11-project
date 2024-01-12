@@ -17,6 +17,7 @@
   font-size: 30px;
   color: var(--text-main-color);
 }
+
 .home_btn:hover {
   cursor: pointer;
 }
@@ -73,6 +74,7 @@
 .movie-detail-list li:last-child {
   border-right: none;
 }
+
 .movie-overview {
   font-family: Inter;
   font-size: 24px;
@@ -81,6 +83,7 @@
   line-height: normal;
   letter-spacing: 0.312px;
 }
+
 .movie-detail-list li:last-child {
   border-right: none;
 }
@@ -127,7 +130,7 @@ textarea::placeholder {
   line-height: normal;
 }
 
-.review-list{
+.review-list {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -141,15 +144,17 @@ textarea::placeholder {
   line-height: normal;
 
 }
+
 .input-list {
   display: flex;
   flex-direction: row;
   height: 48px;
 
 }
+
 .list-name,
 .list-pw {
- 
+
   display: flex;
   flex-direction: row;
   background-color: var(--text-main-color);
@@ -160,7 +165,8 @@ textarea::placeholder {
   justify-content: space-between;
 
 }
-.list-name span, 
+
+.list-name span,
 .list-pw span {
   display: inline-block;
   background-color: var(--text-main-color);
@@ -191,3 +197,18 @@ textarea::placeholder {
   line-height: normal;
 }
 
+#review-read {
+  display: flex;
+  flex-direction: column;
+}
+
+#review-del-btn {
+  background-color: transparent;
+  border: none;
+  font-family: Inter;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  color: var(--delete-text-color);
+}
