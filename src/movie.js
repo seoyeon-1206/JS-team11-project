@@ -7,7 +7,7 @@ export const showMovieList = async () => {
       (movie) =>
         `<li class="movie-card" id=${movie.id}>
       <img src="https://image.tmdb.org/t/p/w500${movie.poster_path}" alt="${movie.original_title}">
-      <h3 class="movie-title">[${movie.original_title} / ${movie.title}]</h3>
+      <h3 class="movie-title">${movie.original_title} / ${movie.title}</h3>
       <p>${movie.overview}</p><br>
       <h5>평점 : ${movie.vote_average}</h5>
       </li>`
