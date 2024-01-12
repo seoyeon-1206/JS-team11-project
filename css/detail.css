@@ -86,19 +86,24 @@
     border-radius: 20px;
     border: 2px solid var(--text-main-color);
     overflow: hidden;
+    position: relative;
   }
   textarea {
     flex: 1; 
     resize: none; 
     box-sizing: border-box;
+    color: var(--text-main-color);
+    font-size: 22px;
+    border: none;
+    text-align: left;
+    padding: 16px;
   }
 
   textarea::placeholder {
     color: rgba(238, 240, 229, 0.50);;
     font-family: Inter;
-    font-size: 24px;
+    font-size: 22px;
     font-style: normal;
     font-weight: 700;
     line-height: normal;
-    padding: 16px;
   }
