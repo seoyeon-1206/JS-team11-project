@@ -78,3 +78,20 @@
         line-height: normal;
         letter-spacing: 0.312px;
   }
+
+  .review-textarea{
+    display: fex;
+    flex-direction: column;
+    border-radius: 20px;
+    border: 2px solid var(--text-main-color);
+  }
+
+  textarea::placeholder {
+    color: rgba(238, 240, 229, 0.50);;
+    font-family: Inter;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    padding: 16px;
+  }
