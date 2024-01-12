@@ -32,7 +32,7 @@ export const reviewReadTemp = (arr) => {
                 <div class="read-right">
                 <div class="read-pw">
                   <span>비밀번호</span>
-                  <input id="input-pw" type="password" maxlength="4" placeholder="" />
+                  <input id="input-del-pw" type="password" maxlength="4" placeholder="" />
                 </div>
                 <button type="submit" id="review-del-btn">삭제</button>
                 </div>
