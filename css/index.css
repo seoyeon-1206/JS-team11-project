@@ -20,7 +20,9 @@ h1 {
   padding: 0 30px;
 }
 hr {
-  color: 2px solid var(--text-main-color);
+  background: rgba(238, 240, 229, 0.1);
+  height: 4px;
+  border: 0;
   margin: 0 40px;
 }
 #search-form {
@@ -30,7 +32,7 @@ hr {
 
 #search-form input {
   /* margin-left: 20px; */
-  min-width: 250px;
+  min-width: 270px;
   padding: 10px 0 10px 10px;
   background-color: var(--bg--search-color);
   text-decoration: var(--search-text-color);
@@ -48,32 +50,30 @@ hr {
 }
 
 #card-list {
-  /* font-family: "Playfair Display", serif; */
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 40px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
 }
 
 .movie-card {
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.12), 0 3px 6px rgba(0, 0, 0, 0.24);
   margin: 20px;
   padding: 20px;
-  width: 370px;
+  width: 436px;
   justify-self: center;
   background-color: var(--bg--card-color);
+  box-shadow: 4px 10px 0px rgba(0, 0, 0, 0.25);
   border: solid 2px var(--text-main-color);
-  border-radius: 10px;
+  border-radius: 20px;
   cursor: pointer;
   user-select: none;
 }
 .movie-card:hover {
-  width: 380px;
+  width: 430px;
 }
 
 .movie-card img {
   width: 100%;
   border-radius: 10px;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 }
 h1:hover {
   cursor: pointer;
