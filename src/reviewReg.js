@@ -6,10 +6,9 @@ const regBtn = document.querySelector("#reg-btn");
 let dataArr = [];
 // 등록 버튼 클릭 시 데이터 객체로 저장 및 배열에 추가
 const getReviewDatas = function (review, name, pw) {
-  
   const currMovieId = new URL(location.href).search.split("?")[1];
 
-  const randomNumber = Math.floor(Math.random() * 10000) + 1;
+  const randomNumber = String(Math.floor(Math.random() * 10000) + 1);
 
   const reviewData = {
     movieId: currMovieId,
@@ -20,10 +19,6 @@ const getReviewDatas = function (review, name, pw) {
   };
 
   dataArr.push(reviewData);
-  const data = {
-    [currMovieId]: dataArr,
-  };
-  localStorage.setItem('data', JSON.stringify(data));
 };
 
 // 등록 버튼 클릭 이벤트
