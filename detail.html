@@ -6,7 +6,7 @@
     <title>상세 페이지</title>
     <script type="module" src="./src/detail.js"></script>
     <link rel="stylesheet" href="./css/reset.css" />
-    <link rel="stylesheet" href="./css/detail.css">
+    <link rel="stylesheet" href="./css/detail.css" />
     <style>
       @import url("https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap");
       @import url("https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@700&display=swap");
@@ -16,19 +16,27 @@
   <body>
     <div class="background">
       <header>
-        <button class="home_btn">
+        <button class="home_btn" onclick="location.href='index.html'">
           <span>
-            <svg width="23" height="21" viewBox="0 0 23 21" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M11.2954 20.7883L0.961639 10.4545L11.2954 0.120728L13.49 2.29402L6.91689 8.86718H22.8864V12.0419H6.91689L13.49 18.6044L11.2954 20.7883Z" fill="#F6F7F1"/>
-              </svg>
+            <svg
+              width="23"
+              height="21"
+              viewBox="0 0 23 21"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M11.2954 20.7883L0.961639 10.4545L11.2954 0.120728L13.49 2.29402L6.91689 8.86718H22.8864V12.0419H6.91689L13.49 18.6044L11.2954 20.7883Z"
+                fill="#F6F7F1"
+              />
+            </svg>
           </span>
           <span class="button-text">메인화면</span>
         </button>
       </header>
       <main>
         <div>
-          <section class="movie-description">
-          </section>
+          <section class="movie-description"></section>
           <section>
             <div class="review-textarea">
               <textarea 
