@@ -21,7 +21,7 @@ const showMovieDetail = async () => {
 };
 
 async function fetchMovieDetail() {
-  const movieId = 123; // 임시 ID
+  const movieId = new URLSearchParams(location.search);
 
   const options = {
     method: "GET",

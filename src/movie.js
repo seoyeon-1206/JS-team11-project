@@ -17,15 +17,13 @@ export const showMovieList = async () => {
   cardList.addEventListener("click", clickCard);
 
   function clickCard(event) {
-    const url = "detail.html?id=";
+    const url = "detail.html?";
 
     if (event.target === cardList) return;
 
     if (event.target.matches(".movie-card")) {
-      //alert(`영화 id: ${event.target.id}`);
       window.location.href = url + event.target.id;
     } else {
-      //alert(`영화 id: ${event.target.parentNode.id}`);
       window.location.href = url + event.target.parentNode.id;
     }
   }
