@@ -56,3 +56,9 @@ async function fetchMovieDetail() {
 }
 
 showMovieDetail();
+
+// 메인으로 클릭 시 이동
+const home = document.querySelector(".home_btn");
+home.addEventListener("click", function () {
+  window.location.href = "index.html";
+});
