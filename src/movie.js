@@ -29,7 +29,7 @@ export const showMovieList = async () => {
   }
 };
 
-async function fetchMovieData() {
+export async function fetchMovieData() {
   const options = {
     method: "GET",
     headers: {

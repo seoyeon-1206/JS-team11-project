@@ -1,65 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>상세 페이지</title>
-    <script type="module" src="./src/detail.js"></script>
-    <link rel="stylesheet" href="./css/reset.css" />
-    <link rel="stylesheet" href="./css/detail.css" />
-    <style>
-      @import url("https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap");
-      @import url("https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@700&display=swap");
-    </style>
-  </head>
 
-  <body>
-    <div class="background">
-      <header>
-        <button class="home_btn">
-          <span>
-            <svg
-              width="23"
-              height="21"
-              viewBox="0 0 23 21"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M11.2954 20.7883L0.961639 10.4545L11.2954 0.120728L13.49 2.29402L6.91689 8.86718H22.8864V12.0419H6.91689L13.49 18.6044L11.2954 20.7883Z"
-                fill="#F6F7F1"
-              />
-            </svg>
-          </span>
-          <span class="button-text">메인화면</span>
-        </button>
-      </header>
-      <main>
-        <div>
-          <section class="movie-description"></section>
-          <section>
-            <div>
-              <textarea
-                name="review"
-                id="review-text"
-                cols="30"
-                rows="10"
-                placeholder="감상평을 입력해주세요"
-              ></textarea>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>상세 페이지</title>
+  <script type="module" src="./src/detail.js"></script>
+  <link rel="stylesheet" href="./css/reset.css" />
+  <link rel="stylesheet" href="./css/detail.css" />
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap");
+    @import url("https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@700&display=swap");
+  </style>
+</head>
+
+<body>
+  <div class="background">
+    <header>
+      <button class="home_btn" onclick="location.href='index.html'">
+        <span>
+          <svg width="23" height="21" viewBox="0 0 23 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M11.2954 20.7883L0.961639 10.4545L11.2954 0.120728L13.49 2.29402L6.91689 8.86718H22.8864V12.0419H6.91689L13.49 18.6044L11.2954 20.7883Z"
+              fill="#F6F7F1" />
+          </svg>
+        </span>
+        <span class="button-text">메인화면</span>
+      </button>
+    </header>
+    <main>
+      <div>
+        <section class="movie-description"></section>
+        <section>
+          <div class="review-textarea">
+            <textarea name="review" id="review-text" cols="30" rows="10" placeholder="감상평을 입력해주세요"></textarea>
+          </div>
+          <form action="" class="review-list">
+            <div class="input-list">
+              <div class="list-name">
+                <span>작성자</span>
+                <input id="input-name" type="text" placeholder="" />
+              </div>
+              <div class="list-pw">
+                <span>비밀번호</span>
+                <input id="input-pw" type="password" placeholder="" />
+              </div>
             </div>
-            <form action="">
-              <input id="input-name" type="text" placeholder="작성자" />
-              <input id="input-pw" type="password" placeholder="비밀번호" />
-              <button type="submit" id="reg-btn">등록</button>
-            </form>
-          </section>
-          <section id="review-read"></section>
-        </div>
-      </main>
-      <footer></footer>
-    </div>
-    <script src="./src/reviewRead.js" type="module"></script>
-    <script src="./src/reviewDel.js" type="module"></script>
-    <script src="./src/reviewReg.js" type="module"></script>
-  </body>
+            <button type="submit" id="reg-btn">등록</button>
+          </form>
+        </section>
+        <section id="review-read"></section>
+      </div>
+    </main>
+    <footer></footer>
+  </div>
+  <script src="./src/reviewRead.js" type="module"></script>
+  <script src="./src/reviewDel.js" type="module"></script>
+  <script src="./src/reviewReg.js" type="module"></script>
+</body>
+
 </html>
