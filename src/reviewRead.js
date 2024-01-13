@@ -10,9 +10,7 @@ export const $section = document.querySelector("#review-read");
 export const $readId = document.querySelectorAll("#review-read");
 export const localDatas = JSON.parse(localStorage.getItem(currMovieId));
 export const datas = localDatas;
-console.log(datas);
+// console.log(datas);
 
 //리뷰 조회 창에 댓글 뿌리기
 // reviewReadTemp(datas);
-
-reviewReadTemp(datas);

@@ -6,7 +6,7 @@ export const reviewReadTemp = (arr) => {
   arr.map((el) => {
     const { userId, pw, name, review, movieId } = el;
     return $section.insertAdjacentHTML(
-      "beforeend",
+      "afterbegin",
       `
            <div movieid="${movieId}">
                <div readid="${userId}">id: ${userId}</div>

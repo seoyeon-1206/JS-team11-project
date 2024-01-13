@@ -1,60 +1,68 @@
 //reviewDel.js
 import { $section, currMovieId } from "./reviewRead.js";
 import { reviewReadTemp } from "./items/reviewReadTemp.js";
+import { dataArr } from "./reviewReg.js";
 
 export const localDatas = JSON.parse(localStorage.getItem(currMovieId));
 export const datas = [...localDatas];
 const $delBtn = document.querySelector("#review-del-btn");
 //삭제 함수
-
-let commentArr = [];
+let nexTdataArr = [];
+// console.log(dataArr);
 const reviewDel = (e) => {
+  // console.log(commentArr);
   e.preventDefault();
   console.log(`======로컬 데이터가 들어옵니다`, datas);
-  const { movieId, userId, name, pw, review } = datas; //userId는 숫자로 들어옴
   const delBtn = e.target;
+  const currPw = delBtn.closest("#review-read").querySelector("input").value;
   const currUserId = delBtn.closest("#review-read").querySelector("div>div")
     .attributes.readid.value;
-  const currPw = delBtn.closest("#review-read").querySelector("input").value;
-  const currName = delBtn
-    .closest("#review-read")
-    .querySelector("div>p>span").innerText;
-  const currText = delBtn
-    .closest("#review-read")
-    .querySelector("div>p").innerText;
-
-  //삭제값 삭제되고 남을 애들 선별-삭제하려는 애와 다른 id를 가진 애들 추출한 값(
-  const viewAfterDel = datas.filter((local) => {
-    return local.userId !== currUserId; // 고유 id 들어오면 고유 id
-  });
-  console.log(viewAfterDel);
 
   //로컬 스토리지에 해당 지정한 글과 일치하는 비밀번호
   const delView = datas.find((local) => {
     const localId = local.userId;
     const localPw = local.pw;
-    const findValue = localId.includes(currUserId);
+    const findValue = localPw.includes(currPw);
     return findValue;
   });
   console.log(delView);
   console.log(delView.pw);
+  console.log(currPw);
+  //삭제값 삭제되고 남을 애들 선별-삭제하려는 애와 다른 id를 가진 애들 추출한 값
+  let viewItems = datas.filter((local) => {
+    console.log(local);
+    return local.userId !== currUserId; // 고유 id 들어오면 고유 id
+  });
 
+  console.log(viewItems);
   //로컬에 먼저 정하고
-  $section.innerHTML = ""; //삭제될 값 비워주고
-  reviewReadTemp(viewAfterDel); // 보여줄 애들로 갈아서 화면에 세팅줌
-  localStorage.setItem(currMovieId, JSON.stringify(viewAfterDel)); //로컬스토리지에 저장
 
-  console.log({ "현재 글의 movieId": currMovieId });
-  console.log({ "현재 글의 작성자 id": currUserId });
-  console.log({ "현재 글의 작성자": currName });
-  console.log({ "현재 글의 작성글": currText });
-  console.log({ "현재 글의 비밀번호": currPw });
-  console.log({ "현재 글의 영화 id": currMovieId });
+  reviewReadTemp(nexTdataArr);
+  // nexTdataArr.push(viewItems);
+  localStorage.setItem(currMovieId, JSON.stringify(nexTdataArr));
+  console.log(nexTdataArr);
 };
 
 $delBtn.addEventListener("click", reviewDel);
 
+// console.log({ "현재 글의 movieId": currMovieId });
+// // console.log({ "현재 글의 작성자 id": currUserId });
+// console.log({ "현재 글의 비밀번호": currPw });
 //
 // delView
 // ? localStorage.setItem(currMovieId, JSON.stringify(viewAfterDel))
 // : alert("비밀번호를 다시 입력해주세요!");
+
+// const currName = delBtn
+//   .closest("#review-read")
+//   .querySelector("div>p>span").innerText;
+
+//  const currText = delBtn
+//    .closest("#review-read")
+//   .querySelector("div>p").innerText;
+
+//     dataArr.push(viewAfterDel);
+
+// console.log({ "현재 글의 작성자": currName });
+// console.log({ "현재 글의 작성글": currText });
+// console.log({ "현재 글의 영화 id": currMovieId });
