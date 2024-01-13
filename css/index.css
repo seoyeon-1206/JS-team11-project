@@ -37,14 +37,14 @@ hr {
   background-color: var(--bg--search-color);
   text-decoration: var(--search-text-color);
   border: none;
-  border-radius: 10px;
+  border-radius: 20px;
 }
 
 #search-form button {
   padding: 10px 20px;
   background-color: var(--text-main-color);
   border: none;
-  border-radius: 10px;
+  border-radius: 20px;
   color: var(--button-text-color);
   font-weight: bold;
 }
@@ -52,6 +52,9 @@ hr {
 #card-list {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  /* display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap; */
 }
 
 .movie-card {
