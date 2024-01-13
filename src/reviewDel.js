@@ -8,9 +8,8 @@ export const datas = [...localDatas];
 const $delBtn = document.querySelector("#review-del-btn");
 //삭제 함수
 let nexTdataArr = [];
-// console.log(dataArr);
+
 const reviewDel = (e) => {
-  // console.log(commentArr);
   e.preventDefault();
   console.log(`======로컬 데이터가 들어옵니다`, datas);
   const delBtn = e.target;
@@ -19,12 +18,9 @@ const reviewDel = (e) => {
     .attributes.readid.value;
 
   //로컬 스토리지에 해당 지정한 글과 일치하는 비밀번호
-  const delView = datas.find((local) => {
-    const localId = local.userId;
-    const localPw = local.pw;
-    const findValue = localPw.includes(currPw);
-    return findValue;
-  });
+  const delView = datas.find(
+    (local) => local.userId === currUserId && local.pw === currPw
+  );
   console.log(delView);
   console.log(delView.pw);
   console.log(currPw);
