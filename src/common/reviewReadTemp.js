@@ -1,5 +1,5 @@
 //reviewReadTemp.js
-import { $section } from "../reviewReadValues.js";
+import { $section } from "./reviewReadValues.js";
 import { reviewDel } from "../reviewReg.js";
 
 //리뷰 조회 템플릿
