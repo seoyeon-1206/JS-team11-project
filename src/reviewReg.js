@@ -23,15 +23,15 @@ if (storageItems) {
 }
 
 // 선택사항 - 시간 추가
-let now_date = new Date(); // 시간 생성자
-let year = new Date().getFullYear();
-let month = new Date().getMonth() + 1;
-let date = new Date().getDate();
-let hour = new Date().getHours();
-let minute = new Date().getMinutes();
+let now_date = new Date(); // 시간 생성자 : 현재 날짜와 시간을 가지는 객체를 리턴
+let year = new Date().getFullYear(); // Date객체의 년도를 가져옴
+let month = new Date().getMonth() + 1; // Date객체의 월 정보를 가져옴 => 컴퓨터상 1월이 0으로 표현되서, 보이는 건 1이어야하니  +1을 해줌
+let date = new Date().getDate(); // Date객체의 일자 정보를 가져옴 (0~31)
+let hour = new Date().getHours(); // Date객체의 시간을 가져옴 (0~23)
+let minute = new Date().getMinutes(); // 분 정보를 가져옴 (0~59)
 
-minute = minute < 10 ? "0" + minute : minute;
-hour = hour < 10 ? "0" + hour : hour;
+minute = minute < 10 ? "0" + minute : minute; //10보다 작으면 0을 붙여줘.
+hour = hour < 10 ? "0" + hour : hour; // 이하동문
 
 export let datelist = [year, month, date, hour, minute]; //date 리스트
 
