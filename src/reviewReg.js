@@ -62,7 +62,7 @@ export const reviewDel = async ($readDivMovieId, e) => {
   const currUserId = e.currentTarget.id;
 
   //로컬 스토리지에서 삭제하려는 애와 다른 id를 가진 애들 추출한 값
-  let stayDataArr = datas.filter((local) => {
+  dataArr = datas.filter((local) => {
     return local.userId !== currUserId; // 고유 id 들어오면 고유 id
   });
 
@@ -102,5 +102,5 @@ export const reviewDel = async ($readDivMovieId, e) => {
   // 이전 중복되는 기록 지워주기
   $readDivMovieId.innerHTML = "";
   // 삭제할 데이터를 뺀 남은 데이터들로 새로 로컬 스토리지에 세팅.
-  localStorage.setItem(currMovieId, JSON.stringify(stayDataArr));
+  localStorage.setItem(currMovieId, JSON.stringify(dataArr));
 };
