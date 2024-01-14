@@ -59,7 +59,6 @@ export const reviewDel = async ($readDivMovieId, e) => {
   const datas = await JSON.parse(localStorage.getItem(currMovieId));
   const currPw = e.target.parentNode.children[3].value;
   const currPwFocus = e.target.parentNode.children[3];
-  console.log(currPwFocus);
   const currUserId = e.currentTarget.id;
 
   //로컬 스토리지에서 삭제하려는 애와 다른 id를 가진 애들 추출한 값
@@ -90,12 +89,13 @@ export const reviewDel = async ($readDivMovieId, e) => {
   //삭제할 글과 일치하는 스토리지 자료의 비밀번호와===============
   //현재 삭제할 글의 비밀번호가 다른 경우
   if (storagePw !== currPw) {
-    alert("비밀번호가 틀려버렸어유!");
+    alert("비밀번호가 틀려버렸어유! 비밀번호 확인 후 다시 입력해 주세유!");
+    currPwFocus.focus();
     return;
   } else if (window.confirm("정말 삭제하시겠어유?") === true) {
-    alert("삭제되었습니다!");
+    alert("댓글이 삭제되었습니다!");
   } else {
-    alert("삭제를 취소하셨어유...");
+    alert("댓글 삭제를 취소하셨어유...");
     return;
   }
 
