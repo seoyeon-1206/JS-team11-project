@@ -23,7 +23,7 @@ if (storageItems) {
 }
 
 // 선택사항 - 시간 추가
-let now_date = new Date();
+let now_date = new Date(); // 시간 생성자
 let year = new Date().getFullYear();
 let month = new Date().getMonth() + 1;
 let date = new Date().getDate();
