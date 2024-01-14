@@ -5,7 +5,13 @@ import { reviewDel } from "../reviewReg.js";
 //리뷰 조회 템플릿
 export const reviewReadTemp = (arr) => {
   arr.map((el) => {
-    const { userId, pw, name, review, movieId } = el;
+    const { userId, pw, name, review, movieId, datelist, now_date } = el;
+    console.log(datelist);
+    /* 연월일, 시간 구분표시 */
+    let y_m_d = datelist.slice(0, 3).join("-"); // ex) 2023-12-12
+    console.log(y_m_d);
+    let h_m = datelist.slice(3, 5).join(":"); // ex) 13:22
+    console.log(h_m);
 
     const $readDivMovieId = document.createElement("div");
     $readDivMovieId.setAttribute("movieid", `${movieId}`);
@@ -22,6 +28,11 @@ export const reviewReadTemp = (arr) => {
     $readPuserName.setAttribute("class", "user-name");
     $readPuserName.innerText = `작성자`;
     $readPuserName.innerHTML = `<span class="name">${name}</span>`;
+
+    //날짜 - 선택사항
+    const $readDivDate = document.createElement("div");
+    $readDivDate.setAttribute("class", "date");
+    $readDivDate.innerText = `${y_m_d + " " + h_m}`;
 
     const $readInput = document.createElement("input");
     $readInput.setAttribute("type", "password");
@@ -41,6 +52,7 @@ export const reviewReadTemp = (arr) => {
     $readDivMovieId.append($readPuserName);
     $readDivMovieId.append($readInput);
     $readDivMovieId.append($readButton);
+    $readDivMovieId.append($readDivDate);
 
     return $section.insertAdjacentElement("afterbegin", $readDivMovieId);
   });
