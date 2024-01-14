@@ -23,7 +23,7 @@ if (storageItems) {
 }
 
 // 선택사항 - 시간 추가
-let now_date = new Date(); // 시간 생성자 : 현재 날짜와 시간을 가지는 객체를 리턴
+let now_date = new Date(); // 시간 생성자 : 현재 날짜와 시간을 가지는 객체를 뤼턴
 let year = new Date().getFullYear(); // Date객체의 년도를 가져옴
 let month = new Date().getMonth() + 1; // Date객체의 월 정보를 가져옴 => 컴퓨터상 1월이 0으로 표현되서, 보이는 건 1이어야하니  +1을 해줌
 let date = new Date().getDate(); // Date객체의 일자 정보를 가져옴 (0~31)
