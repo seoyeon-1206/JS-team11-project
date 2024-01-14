@@ -50,9 +50,9 @@ export const reviewReadTemp = (arr) => {
     $readDivMovieId.append($readDivReadId);
     $readDivMovieId.append($readPreview);
     $readDivMovieId.append($readPuserName);
+    $readDivMovieId.append($readDivDate);
     $readDivMovieId.append($readInput);
     $readDivMovieId.append($readButton);
-    $readDivMovieId.append($readDivDate);
 
     return $section.insertAdjacentElement("afterbegin", $readDivMovieId);
   });

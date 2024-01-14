@@ -73,9 +73,7 @@ export const reviewDel = async ($readDivMovieId, e) => {
   e.preventDefault();
   const datas = await JSON.parse(localStorage.getItem(currMovieId));
   const currPw = e.target.parentNode.children[4].value;
-  console.log(currPw);
   const currPwFocus = e.target.parentNode.children[4];
-  console.log(currPwFocus);
   const currUserId = e.currentTarget.id;
 
   //로컬 스토리지에서 삭제하려는 애와 다른 id를 가진 애들 추출한 값
