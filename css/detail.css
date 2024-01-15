@@ -224,17 +224,6 @@ textarea::placeholder {
   margin-bottom: 16px;
 }
 
-.user-name,
-.name {
-  color: rgba(238, 240, 229, 0.52);
-  font-family: Inter;
-  font-size: 20px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: normal;
-  margin-right: 10px;
-}
-
 .read-right {
   display: flex;
   flex-direction: row;
@@ -273,13 +262,20 @@ textarea::placeholder {
   display: none;
 }
 
-.read-name{
-  color: rgba(238, 240, 229, 0.52);
+.read-name {
   display: flex;
   flex-direction: row;
+}
+
+.read-name span{
+  color: rgba(238, 240, 229, 0.52);
   font-family: Inter;
   font-size: 20px;
   font-style: normal;
   font-weight: 500;
   line-height: normal;
+  margin-right: 10px;
 }
+
+
+

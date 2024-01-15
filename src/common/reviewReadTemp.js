@@ -35,8 +35,8 @@ export const reviewReadTemp = (arr) => {
 
     //날짜 - 선택사항
     const $readDivDate = document.createElement("p");
-    $readDivDate.setAttribute("class", "date");
-    $readDivDate.innerHTML = `<span>${y_m_d + " " + h_m}</span>`;
+    $readDivDate.setAttribute("class", "user-date");
+    $readDivDate.innerHTML = `<span class= "date">${y_m_d + " " + h_m}</span>`;
 
     const $readDivReadRight = document.createElement("div");
     $readDivReadRight.setAttribute("class", "read-right");
