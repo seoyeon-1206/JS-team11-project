@@ -250,6 +250,12 @@ textarea::placeholder {
   margin-right: 16px;
 }
 
+.pass-word-input-del-pw {
+  all: unset;
+  border-bottom: 2px solid var(--text-main-color);
+  margin-right: 16px;
+
+}
 .review-del-btn {
   background-color: transparent;
   border: none;
@@ -280,6 +286,3 @@ textarea::placeholder {
   line-height: normal;
   margin-right: 10px;
 }
-
-
-
