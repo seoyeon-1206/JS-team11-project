@@ -35,8 +35,8 @@ export const reviewReadTemp = (arr) => {
 
     //날짜 - 선택사항
     const $readDivDate = document.createElement("p");
-    $readDivDate.setAttribute("class", "date");
-    $readDivDate.innerHTML = `<span>${y_m_d + " " + h_m}</span>`;
+    $readDivDate.setAttribute("class", "user-date");
+    $readDivDate.innerHTML = `<span class= "date">${y_m_d + " " + h_m}</span>`;
 
     const $readDivReadRight = document.createElement("div");
     $readDivReadRight.setAttribute("class", "read-right");
@@ -50,7 +50,7 @@ export const reviewReadTemp = (arr) => {
     const $readInput = document.createElement("input");
     $readInput.setAttribute("type", "password");
     $readInput.setAttribute("maxLength", "4");
-    $readInput.setAttribute("placeholder", "password");
+    $readInput.setAttribute("placeholder", "");
     $readInput.setAttribute("class", "pass-word input-del-pw");
 
     const $readButton = document.createElement("button");
