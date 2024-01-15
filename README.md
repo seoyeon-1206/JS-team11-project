@@ -1,4 +1,4 @@
-# 🎞프로젝트 "Show Me Your Movie"
+# 🎞프로젝트 "Show Me Your Movie"🎞
 
 ### < 목차 >
 
