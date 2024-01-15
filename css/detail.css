@@ -239,6 +239,10 @@ textarea::placeholder {
   line-height: normal;
 }
 
+.read-pw span {
+  margin-right: 10px;
+}
+
 .input-del-pw {
   all: unset;
   border-bottom: 2px solid var(--text-main-color);
