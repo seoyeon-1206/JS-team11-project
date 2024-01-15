@@ -31,7 +31,8 @@ const showMovieDetail = async () => {
 };
 
 async function fetchMovieDetail() {
-  const movieId = new URLSearchParams(location.search);
+  const urlSearch = new URLSearchParams(location.search);
+  const movieId = urlSearch.get("id");
 
   const options = {
     method: "GET",
