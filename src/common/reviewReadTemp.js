@@ -61,9 +61,8 @@ export const reviewReadTemp = (arr) => {
     $readButton.addEventListener("click", (e) => reviewDel($readDivMovieId, e));
     // 구성하는 라인
     $readDivMovieId.append($readDivReadId);
-
-    $readDivReadId.append($readReadDetail);
-    $readDivReadId.append($readDivReadList);
+    $readDivMovieId.append($readReadDetail);
+    $readDivMovieId.append($readDivReadList);
 
     $readDivReadList.append($readDivReadName);
     $readDivReadList.append($readDivReadRight);
