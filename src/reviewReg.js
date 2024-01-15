@@ -98,7 +98,7 @@ regBtn.addEventListener("click", (e) => {
       alert('비밀번호를 입력해주세요.');
       inputPw.focus();
     } else if (!(inputPw.value.length === 4)) {
-      alert('비밀번호는 4자리로 입력해주세요.');
+      alert('4자리의 비밀번호로 입력해주세요.');
       inputPw.value = "";
       inputPw.focus();
     } else {
