@@ -1,7 +1,7 @@
 import reviewReadTemp from "./common/reviewReadTemp.js";
 import { $section, blankPattern } from "./common/reviewReadValues.js";
 
-const currMovieId = new URL(location.href).search.split("?")[1];
+const currMovieId = new URL(location.href).searchParams.get("id");
 const reviewText = document.querySelector("#review-text");
 const inputName = document.querySelector("#input-name");
 const inputPw = document.querySelector("#input-pw");
@@ -104,7 +104,7 @@ export const reviewDel = async ($readDivMovieId, e) => {
     currPwFocus.focus();
     return;
   }
-  //삭제할 글과 일치하는 스토리지 자료의 비밀번호와===============
+  //삭제할 글과 일치하는 스토리지 자료의 비밀번호와==============
   //현재 삭제할 글의 비밀번호가 다른 경우
   if (storagePw !== currPw) {
     alert("비밀번호가 틀려버렸어유! 비밀번호 확인 후 다시 입력해 주세유!");
