@@ -6,14 +6,10 @@ const reviewText = document.querySelector("#review-text");
 const inputName = document.querySelector("#input-name");
 const inputPw = document.querySelector("#input-pw");
 const regBtn = document.querySelector("#reg-btn");
-const inputValue = inputName.value; // 따로 꺼내놨습니다!
-const reviewValue = reviewText.value;
-const pwValue = inputPw.value;
 const storageItems = JSON.parse(localStorage.getItem(currMovieId));
 export let dataArr = [];
-//페이지 새로고침 시 로컬스토리지에 저장된 데이터 배열에 추가
 
-console.log(storageItems);
+//페이지 새로고침 시 로컬스토리지에 저장된 데이터 배열에 추가
 if (storageItems) {
   storageItems.forEach((element) => {
     dataArr.push(element);
@@ -58,13 +54,58 @@ function getReviewDatas() {
   inputPw.value = "";
 }
 
+// 감상평 유효성 검사
+reviewText.onkeyup = function () {
+  if (!(reviewText.value.length <= 100)) {
+    alert('100자 이내로 입력해주세요.');
+    reviewText.value = reviewText.value.slice(0, -1);
+  }
+}
+
+// 이름 유효성 검사
+function koEnValidation(koEn) {
+  return /^[ㄱ-ㅣ가-힇a-zA-z]*$/.test(koEn);
+}
+
+inputName.onkeyup = function () {
+  if (koEnValidation(inputName.value) === false) {
+    alert('공백이 없는 한글 또는 영어만 입력해주세요.');
+    inputName.value = inputName.value.slice(0, -1);
+  } else if (!(inputName.value.length <= 8)) {
+    alert('8자 이하로 입력해주세요.');
+    inputName.value = inputName.value.slice(0, -1);
+  }
+}
+
 // 등록 버튼 클릭 이벤트
 regBtn.addEventListener("click", (e) => {
   e.preventDefault();
   //기존의 내용이 있으면 지우고
   $section.innerHTML = "";
-  // 데이터를 추가
-  getReviewDatas();
+
+  // input 유효성 검사
+  if (reviewText.value === "" && inputName.value === "" && inputPw.value === "") {
+    alert('모든 입력창을 입력해주세요.');
+    reviewText.focus();
+  } else {
+    if (reviewText.value === "") {
+      alert('감상평을 입력해주세요.');
+      reviewText.focus();
+    } else if (inputName.value === "") {
+      alert('이름을 입력해주세요.');
+      inputName.focus();
+    } else if (inputPw.value === "") {
+      alert('비밀번호를 입력해주세요.');
+      inputPw.focus();
+    } else if (!(inputPw.value.length === 4)) {
+      alert('비밀번호는 4자리로 입력해주세요.');
+      inputPw.value = "";
+      inputPw.focus();
+    } else {
+      // 데이터를 추가
+      getReviewDatas();
+    }
+  }
 });
 
 //삭제 함수 =========================================
