@@ -171,11 +171,11 @@ textarea::placeholder {
 }
 
 .list-name span {
-  width: 67px;
+  width: 75px;
 }
 
 .list-pw span {
-  width: 90px;
+  width: 100px;
 }
 
 #input-name,
@@ -265,4 +265,8 @@ textarea::placeholder {
   line-height: normal;
   text-align: centerS;
   color: var(--delete-text-color);
+}
+
+.read-id{
+  display: none;
 }
