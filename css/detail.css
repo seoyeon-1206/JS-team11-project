@@ -171,11 +171,11 @@ textarea::placeholder {
 }
 
 .list-name span {
-  width: 67px;
+  width: 75px;
 }
 
 .list-pw span {
-  width: 90px;
+  width: 100px;
 }
 
 #input-name,
@@ -221,16 +221,7 @@ textarea::placeholder {
   justify-content: space-between;
   border-bottom: 2px solid rgba(238, 240, 229, 0.6);
   padding-bottom: 10px;
-}
-
-.user-name,
-.name {
-  color: rgba(238, 240, 229, 0.52);
-  font-family: Inter;
-  font-size: 20px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: normal;
+  margin-bottom: 16px;
 }
 
 .read-right {
@@ -246,6 +237,10 @@ textarea::placeholder {
   font-style: normal;
   font-weight: 600;
   line-height: normal;
+}
+
+.read-pw span {
+  margin-right: 10px;
 }
 
 .input-del-pw {
@@ -266,3 +261,25 @@ textarea::placeholder {
   text-align: centerS;
   color: var(--delete-text-color);
 }
+
+.read-id{
+  display: none;
+}
+
+.read-name {
+  display: flex;
+  flex-direction: row;
+}
+
+.read-name span{
+  color: rgba(238, 240, 229, 0.52);
+  font-family: Inter;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  margin-right: 10px;
+}
+
+
+
