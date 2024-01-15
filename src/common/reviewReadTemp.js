@@ -50,7 +50,7 @@ export const reviewReadTemp = (arr) => {
     const $readInput = document.createElement("input");
     $readInput.setAttribute("type", "password");
     $readInput.setAttribute("maxLength", "4");
-    $readInput.setAttribute("placeholder", "password");
+    $readInput.setAttribute("placeholder", "");
     $readInput.setAttribute("class", "pass-word input-del-pw");
 
     const $readButton = document.createElement("button");
