@@ -22,6 +22,19 @@ if (storageItems) {
   });
 }
 
+// 선택사항 - 시간 추가
+let now_date = new Date(); // 시간 생성자 : 현재 날짜와 시간을 가지는 객체를 뤼턴
+let year = new Date().getFullYear(); // Date객체의 년도를 가져옴
+let month = new Date().getMonth() + 1; // Date객체의 월 정보를 가져옴 => 컴퓨터상 1월이 0으로 표현되서, 보이는 건 1이어야하니  +1을 해줌
+let date = new Date().getDate(); // Date객체의 일자 정보를 가져옴 (0~31)
+let hour = new Date().getHours(); // Date객체의 시간을 가져옴 (0~23)
+let minute = new Date().getMinutes(); // 분 정보를 가져옴 (0~59)
+
+minute = minute < 10 ? "0" + minute : minute; //10보다 작으면 0을 붙여줘.
+hour = hour < 10 ? "0" + hour : hour; // 이하동문
+
+export let datelist = [year, month, date, hour, minute]; //date 리스트
+
 // 등록 버튼 클릭 시 데이터 객체로 저장 및 배열에 추가
 function getReviewDatas() {
   const randomNumber = String(Math.floor(Math.random() * 10000) + 1);
@@ -32,6 +45,8 @@ function getReviewDatas() {
     name: inputName.value,
     pw: inputPw.value,
     review: reviewText.value,
+    datelist: datelist,
+    now_date: now_date,
   };
   dataArr.push(reviewData);
   localStorage.setItem(currMovieId, JSON.stringify(dataArr));
@@ -57,8 +72,8 @@ regBtn.addEventListener("click", (e) => {
 export const reviewDel = async ($readDivMovieId, e) => {
   e.preventDefault();
   const datas = await JSON.parse(localStorage.getItem(currMovieId));
-  const currPw = e.target.parentNode.children[3].value;
-  const currPwFocus = e.target.parentNode.children[3];
+  const currPw = await e.target.parentNode.children[0].children[1].value;
+  const currPwFocus = e.target.parentNode.children[0].children[1];
   const currUserId = e.currentTarget.id;
 
   //로컬 스토리지에서 삭제하려는 애와 다른 id를 가진 애들 추출한 값
