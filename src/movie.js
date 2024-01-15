@@ -17,7 +17,7 @@ export const showMovieList = async () => {
   cardList.addEventListener("click", clickCard);
 
   function clickCard(event) {
-    const url = "detail.html?";
+    const url = "detail.html?id=";
 
     if (event.target === cardList) return;
 
