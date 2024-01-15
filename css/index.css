@@ -13,21 +13,29 @@ body {
   color: var(--text-main-color);
 }
 header {
-  padding: 30px 30px;
+  padding: 30px 30px 0 30px;
 }
 h1 {
   display: inline-block;
   padding: 0 30px;
+  font-family: Inter;
+  font-size: 44px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
 }
 hr {
   background: rgba(238, 240, 229, 0.1);
   height: 4px;
   border: 0;
-  margin: 0 40px;
+  margin: 45px 36px;
 }
 #search-form {
   float: right;
   margin: 0 30px;
+  background-color: var(--bg--search-color);
+  border: none;
+  border-radius: 20px;
 }
 
 #search-form input {
@@ -38,6 +46,11 @@ hr {
   text-decoration: var(--search-text-color);
   border: none;
   border-radius: 20px;
+  font-family: Inter;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
 }
 
 #search-form button {
@@ -46,20 +59,25 @@ hr {
   border: none;
   border-radius: 20px;
   color: var(--button-text-color);
-  font-weight: bold;
+  font-family: Inter;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+
+  width: 120.648px;
+  height: 55.692px;
+  flex-shrink: 0;
 }
 
 #card-list {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  /* display: flex;
-  justify-content: space-evenly;
-  flex-wrap: wrap; */
 }
 
 .movie-card {
   margin: 20px;
-  padding: 20px;
+  padding: 26px 43px;
   width: 436px;
   justify-self: center;
   background-color: var(--bg--card-color);
@@ -82,8 +100,19 @@ h1:hover {
   cursor: pointer;
 }
 h3 {
+  margin-top: 10px;
   margin-bottom: 10px;
+  font-family: Inter;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
 }
 p {
-  line-height: 25px;
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  /* line-height: 25px; */
 }
