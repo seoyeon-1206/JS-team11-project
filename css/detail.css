@@ -185,6 +185,15 @@ textarea::placeholder {
   color: var(--button-text-color);
 }
 
+.input-list ::placeholder {
+  color: rgb(78, 89, 104, 0.5);
+  font-family: Inter;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
 #reg-btn {
   background-color: var(--text-main-color);
   max-width: 124px;
@@ -250,6 +259,13 @@ textarea::placeholder {
   margin-right: 16px;
 }
 
+.pass-word-input-del-pw {
+  all: unset;
+  border-bottom: 2px solid var(--text-main-color);
+  margin-right: 16px;
+
+}
+
 .review-del-btn {
   background-color: transparent;
   border: none;
@@ -262,7 +278,7 @@ textarea::placeholder {
   color: var(--delete-text-color);
 }
 
-.read-id{
+.read-id {
   display: none;
 }
 
@@ -271,7 +287,7 @@ textarea::placeholder {
   flex-direction: row;
 }
 
-.read-name span{
+.read-name span {
   color: rgba(238, 240, 229, 0.52);
   font-family: Inter;
   font-size: 20px;
@@ -280,6 +296,3 @@ textarea::placeholder {
   line-height: normal;
   margin-right: 10px;
 }
-
-
-

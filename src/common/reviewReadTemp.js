@@ -51,7 +51,7 @@ export const reviewReadTemp = (arr) => {
     $readInput.setAttribute("type", "password");
     $readInput.setAttribute("maxLength", "4");
     $readInput.setAttribute("placeholder", "");
-    $readInput.setAttribute("class", "pass-word input-del-pw");
+    $readInput.setAttribute("class", "pass-word-input-del-pw");
 
     const $readButton = document.createElement("button");
     $readButton.setAttribute("type", "submit");
