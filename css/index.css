@@ -34,10 +34,13 @@ hr {
 
 }
 #search-form {
+  display: flex;
+  justify-content: flex-end;
   float: right;
   background-color: var(--bg--search-color);
   border: none;
   border-radius: 20px;
+  height: 56px;
 }
 
 #search-form input {
