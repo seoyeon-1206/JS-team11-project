@@ -82,6 +82,7 @@
 
 - **environment :** Visual Studio Code, git, github
 - **development :** HTML5, CSS3, Javascript
+- **DB**: LocalStorage
 - **OpenAPI** : TMDB
   - https://developer.themoviedb.org/reference/movie-top-rated-list (영화리스트)
   - https://developer.themoviedb.org/reference/movie-details (영화 상세 내용)
