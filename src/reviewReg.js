@@ -1,7 +1,10 @@
 import reviewReadTemp from "./common/reviewReadTemp.js";
-import { $section, blankPattern } from "./common/reviewReadValues.js";
+import {
+  $section,
+  blankPattern,
+  currMovieId,
+} from "./common/reviewReadValues.js";
 
-const currMovieId = new URL(location.href).searchParams.get("id");
 const reviewText = document.querySelector("#review-text");
 const inputName = document.querySelector("#input-name");
 const inputPw = document.querySelector("#input-pw");
