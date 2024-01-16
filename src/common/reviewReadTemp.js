@@ -3,6 +3,7 @@ import { $section } from "./reviewReadValues.js";
 import { reviewDel } from "../reviewReg.js";
 
 //리뷰 조회 템플릿
+
 export const reviewReadTemp = (arr) => {
   arr.map((el) => {
     const { userId, pw, name, review, movieId, datelist, now_date } = el;

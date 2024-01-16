@@ -57,10 +57,10 @@ function getReviewDatas() {
 // 감상평 유효성 검사
 reviewText.onkeyup = function () {
   if (!(reviewText.value.length <= 100)) {
-    alert('100자 이내로 입력해주세요.');
+    alert("100자 이내로 입력해주세요.");
     reviewText.value = reviewText.value.slice(0, -1);
   }
-}
+};
 
 // 이름 유효성 검사
 function koEnValidation(koEn) {
@@ -69,13 +69,13 @@ function koEnValidation(koEn) {
 
 inputName.onkeyup = function () {
   if (koEnValidation(inputName.value) === false) {
-    alert('공백이 없는 한글 또는 영어만 입력해주세요.');
+    alert("공백이 없는 한글 또는 영어만 입력해주세요.");
     inputName.value = inputName.value.slice(0, -1);
   } else if (!(inputName.value.length <= 8)) {
-    alert('8자 이하로 입력해주세요.');
+    alert("8자 이하로 입력해주세요.");
     inputName.value = inputName.value.slice(0, -1);
   }
-}
+};
 
 // 등록 버튼 클릭 이벤트
 regBtn.addEventListener("click", (e) => {
@@ -84,21 +84,25 @@ regBtn.addEventListener("click", (e) => {
   $section.innerHTML = "";
 
   // input 유효성 검사
-  if (reviewText.value === "" && inputName.value === "" && inputPw.value === "") {
-    alert('모든 입력창을 입력해주세요.');
+  if (
+    reviewText.value === "" &&
+    inputName.value === "" &&
+    inputPw.value === ""
+  ) {
+    alert("모든 입력창을 입력해주세요.");
     reviewText.focus();
   } else {
     if (reviewText.value === "") {
-      alert('감상평을 입력해주세요.');
+      alert("감상평을 입력해주세요.");
       reviewText.focus();
     } else if (inputName.value === "") {
-      alert('이름을 입력해주세요.');
+      alert("이름을 입력해주세요.");
       inputName.focus();
     } else if (inputPw.value === "") {
-      alert('비밀번호를 입력해주세요.');
+      alert("비밀번호를 입력해주세요.");
       inputPw.focus();
     } else if (!(inputPw.value.length === 4)) {
-      alert('4자리의 비밀번호로 입력해주세요.');
+      alert("4자리의 비밀번호로 입력해주세요.");
       inputPw.value = "";
       inputPw.focus();
     } else {
@@ -107,14 +111,16 @@ regBtn.addEventListener("click", (e) => {
     }
   }
 });
-
 //삭제 함수 =========================================
 //reviewDel.js
 export const reviewDel = async ($readDivMovieId, e) => {
   e.preventDefault();
   const datas = await JSON.parse(localStorage.getItem(currMovieId));
-  const currPw = await e.target.parentNode.children[0].children[1].value;
-  const currPwFocus = e.target.parentNode.children[0].children[1];
+  const currPwElement = e.currentTarget
+    .closest(".read-right")
+    .querySelector(".pass-word-input-del-pw");
+  const currPw = currPwElement.value;
+  const currPwFocus = currPwElement;
   const currUserId = e.currentTarget.id;
 
   //로컬 스토리지에서 삭제하려는 애와 다른 id를 가진 애들 추출한 값
